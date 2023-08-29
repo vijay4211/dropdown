@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropbtn{
+            background-color: #4caf50;
+            color: white;
+            font-size: 16px;
+            padding: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        /* main container */
+        .dropdown{
+           border: 1px solid red;
+           position: relative;
+           /* jitan content hai utani width leta hai */
+           display: inline-block;
+        }
+        /* sub container */
+        .dropdown-content{
+            /* hide the drwopdown-content div */
+            display: none;
+            background-color: #f9f9f9;
+            min-width:200px ;
+            border: 2px solid blue;
+            /* .dropdown parent hai. */
+            position: absolute;
+            z-index: 1;
+        }
+        .dropdown-content a{
+            color: black;
+            text-decoration: none;
+            padding: 12px 16px;
+            /* padding ke value ka effect show karne ke liye ham anchor tag per display block ka use karte hai. */
+            display: block;
+        }
+
+        /* dropdown per hover karna hai but uske under ka jo div hai.dropdwon-content waha bhi show hona chahiye */
+        .dropdown:hover .dropdown-content{
+            /* show the drwopdown-content div */
+           display: block;
+        }
+        /* sub container ka child anchor tag hai. */
+        .dropdown-content a:hover{
+            background-color: #f1f1f1;
+        }
+
+        /* .dropdown per jab ham hover karenge to .dropbtn ka background color hame green show hota hai. */
+        .dropdown:hover .dropbtn{
+            background-color: #3e8e4f;
+        }
+    </style>
+</head>
+<body>
+    <!-- main container div -->
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <!-- sub container div -->
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    
+<p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+</body>
+</html>
