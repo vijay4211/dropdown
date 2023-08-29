@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            border: 1px solid red;
+            position: relative;
+            /* display inline block ke help se ham jitana content hai utani hi width rakha sakte hai. */
+            display: inline-block;
+        }
+        .dropdown-content{
+            /* hide the div */
+            display: none;
+            position: absolute;
+            border: 1px solid blue;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            /* parent div se child div high light hota hai. */
+            z-index: 3;
+        }
+        /* dropdown per hover karna hai but uske under ka jo div hai .dropdwon-content waha bhi show hona chahiye */
+        .dropdown:hover .dropdown-content{
+            /* show the div */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hoverable Dropdown</h2>
+<p>Move the mouse over the text below to open the dropdown content.</p>
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+</body>
+</html>
+
